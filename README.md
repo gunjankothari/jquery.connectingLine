@@ -25,7 +25,7 @@ Step - 3 :
 Give the left_node and second_node as First node and Second Node respectively. These are mandatory fields.
 There are few other parameters you can pass to customize your connecting line.
 
-
+//Options
 left_node - Left Element by ID - Mandatory
 right_node - Right Element ID - Mandatory
 status - accepted, rejected, modified, (none) - Optional
