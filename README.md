@@ -10,6 +10,9 @@ Here is an example step by step :
 
 Step - 1 :
 Required files- 
+required/script/jquery-1.11.0.min.js
+required/script/jquery.svg.min.js
+required/script/jquery.connectingLine.js
 <script type="text/javascript" src="required/script/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="required/script/jquery.svg.min.js"></script>
 <script type="text/javascript" src="required/script/jquery.connectingLine.js"></script>
