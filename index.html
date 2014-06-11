@@ -10,9 +10,13 @@
 
 <body>
 <div class="node1">Drag Me</div>
+<div class="node2" style="left: 32px; top: 252px;">Drag Me</div>
+<div class="node2" style="left: 435px; top: 356px;">Drag Me</div>
 <div class="node2">Drag Me</div>
+<div class="node2" style="left: 528px; top: 80px;">Drag Me</div>
+<div class="node2" style="left: 219px; top: 402px;">Drag Me</div>
+<div class="node2" style="left: 652px; top: 221px;">Drag Me</div>
 <script type="text/javascript" src="required/script/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="required/script/jquery.svg.min.js"></script>
 <script type="text/javascript" src="required/script/jquery.connectingLine.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.min.js"></script>
 <script type="text/javascript">
@@ -20,7 +24,7 @@
 		mySVG.drawLine({
 			left_node:'.node1',
 			right_node:'.node2',
-			horizantal_gap:10
+			horizantal_gap:10,
 		});
 		$( ".node1" ).draggable({
 		  drag: function(event, ui){mySVG.redrawLines();}

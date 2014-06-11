@@ -11,6 +11,7 @@ body
 	background:#666;
 	color : #fff;
 	padding:10px;
+	cursor:pointer;
 	font-family:Georgia, "Times New Roman", Times, serif
 }
 .node2{
@@ -19,5 +20,6 @@ body
 	background:#F99;
 	left: 300px;
 	padding:10px;
+	cursor:pointer;
 	font-family:Georgia, "Times New Roman", Times, serif
 }
