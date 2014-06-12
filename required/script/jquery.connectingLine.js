@@ -150,7 +150,7 @@
 							_ctx.setLineDash = function () {}
 						}
 						else {
-							_ctx.setLineDash([2,3]);
+							_ctx.setLineDash(_dash);
 						}
 						_ctx.lineWidth=option.width||2;
 						_ctx.strokeStyle = _color;
