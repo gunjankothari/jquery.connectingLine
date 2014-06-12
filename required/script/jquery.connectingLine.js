@@ -63,6 +63,7 @@
 				style - (dashed), solid, dotted - Optional	
 				horizantal_gap - (0), Horizantal Gap from original point
 				error - show, (hide) - To show error or not
+				width - (2) - Width of the line
 			}
 			*/	
 				
@@ -97,19 +98,19 @@
 					switch (option.style)
 					{
 						case 'dashed':
-							_dash = 4,2;  
+							_dash = [4,2];  
 							break;
 						
 						case 'solid':
-							_dash = 0,0;  
+							_dash = [0,0];  
 							break;
 						
 						case 'dotted' :
-							_dash = 4,2;  
+							_dash = [4,2];  
 							break;
 							
 						default :
-							_dash = 4,2;  
+							_dash = [4,2];  
 							break;
 					}
 					
@@ -136,20 +137,22 @@
 						//Draw Line
 						var _gap = option.horizantal_gap || 0 ;
 						
+						
+						_ctx.moveTo(_left.x, _left.y);
 						if(_gap != 0)
 						{
-							_ctx.moveTo(_left.x, _left.y); 
 							_ctx.lineTo(_left.x + _gap, _left.y); 
 							_ctx.lineTo(_right.x - _gap, _right.y); 
-							_ctx.lineTo(_right.x, _right.y); 
 						}
-						else
-						{
-							_ctx.moveTo(_left.x, _left.y); 
-							_ctx.lineTo(_right.x, _right.y); 				
+						_ctx.lineTo(_right.x, _right.y); 
+						
+						if (!_ctx.setLineDash) {
+							_ctx.setLineDash = function () {}
 						}
-						_ctx.setLineDash([_dash])
-						_ctx.lineWidth = 3;
+						else {
+							_ctx.setLineDash([2,3]);
+						}
+						_ctx.lineWidth=option.width||2;
 						_ctx.strokeStyle = _color;
 						_ctx.stroke();
 					});
