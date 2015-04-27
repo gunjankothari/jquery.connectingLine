@@ -1,4 +1,4 @@
-jquery.connectingLine
+# jquery.connectingLine
 =====================
 
 This jQuery Plugin helps to connect two elements with a line. 
